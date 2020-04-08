@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# wget  -O bin/fix_app "url" && chmod 777 bin/fix_app && bin/fix_app
+
+format_path = "config/application.rb"
+
+format_file = File.open(format_path, File::RDWR)
+
+text = File.open(format_path).read
+
+new_content = text.gsub("# require \"action_mailer/railtie\"", "require \"action_mailer/railtie\"")
+
+format_file.seek(0)
+format_file.write(new_content)
