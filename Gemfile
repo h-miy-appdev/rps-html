@@ -44,11 +44,12 @@ gem 'sprockets', '< 4'
 gem 'sassc-rails'
 gem 'execjs'
 gem 'therubyracer', platforms: :ruby
+gem "oj"
 
 group :development, :test do
   gem 'awesome_print'
   gem 'dotenv-rails'
-  gem 'grade_runner', github: 'firstdraft/grade_runner'
+  gem 'grade_runner', github: 'firstdraft/grade_runner', branch: "jw-use-oj-to-parse-json"
   gem 'pry-rails'
   gem 'sqlite3', '~> 1.4.1'
   gem 'table_print'
