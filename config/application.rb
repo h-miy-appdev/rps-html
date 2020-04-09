@@ -46,4 +46,3 @@ module RpsHtml
     config.generators.system_tests = nil
   end
 end
-d
